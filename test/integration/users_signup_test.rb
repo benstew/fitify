@@ -25,5 +25,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
     assert_template 'users/show'
     # assert_not flash.FIll_IN #for testing the flash message
+    assert is_logged_in?
   end
 end
