@@ -5,12 +5,8 @@
 <%= will_paginate %>
 
 <ul class="users">
-  <% @users.each do |user| %>
-    <li>
-      <%= gravatar_for user, size: 50 %>
-      <%= link_to user.name, user %>
-    </li>
-  <% end %>
+  <!--Rails infers that @users is a list of users and iterates/renders -->
+  <%= render @users %>
 </ul>
 
 <%= will_paginate %>
