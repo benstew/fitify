@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessor :remember_token, :activation_token, :reset_token
-  has_many :microposts
+  has_many :microposts, dependent: :destroy
 
   # Callback to downcase the email attribute before saving the user
   before_save   :downcase_email
