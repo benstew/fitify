@@ -5,7 +5,12 @@ class User < ActiveRecord::Base
                                 foreign_key: "follower_id",
                                 dependent:   :destroy
 
+  has_many :passive_relationships, class_name:  "Relationship",
+                                   foreign_key: "followed_id",
+                                   dependent:   :destroy
+
   has_many :following, through: :active_relationships, source: :followed
+  has_many :followers, through: :passive_relationships, source: :follower
 
   # Callback to downcase the email attribute before saving the user
   before_save   :downcase_email
