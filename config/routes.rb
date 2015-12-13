@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   delete  'logout'  => 'sessions#destroy'
 
 
+  get     'analytics' => 'analytics#home'
+
+
   # Sets up users/1/following and user/1/followers
   resources :users do
     member do
