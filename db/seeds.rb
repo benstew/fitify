@@ -20,8 +20,8 @@ User.create!(name:  "Example User",
 
  User.create!(name:  "Jeff",
               email: "jeff@gmail.com",
-              password:              "ball",
-              password_confirmation: "ball",
+              password:              "basketball",
+              password_confirmation: "basketball",
               admin: true,
               activated: true,
               activated_at: Time.zone.now)
