@@ -10,21 +10,21 @@
 # reset the database with rake db:migrate:reset
 # To clean User.destory_all
 
-User.create!(name:  "Example User",
-             email: "example@gmail.com",
-             password:              "foobar",
-             password_confirmation: "foobar",
+# User.create!(name:  "Example User",
+#              email: "example@gmail.com",
+#              password:              "foobar",
+#              password_confirmation: "foobar",
+#              admin: true,
+#              activated: true,
+#              activated_at: Time.zone.now)
+
+User.create!(name:  "Jeff",
+             email: "jeff@gmail.com",
+             password:              "basketball",
+             password_confirmation: "basketball",
              admin: true,
              activated: true,
              activated_at: Time.zone.now)
-
- User.create!(name:  "Jeff",
-              email: "jeff@gmail.com",
-              password:              "basketball",
-              password_confirmation: "basketball",
-              admin: true,
-              activated: true,
-              activated_at: Time.zone.now)
 
 99.times do |n|
   name  = Faker::Name.name
