@@ -18,8 +18,8 @@
 #              activated: true,
 #              activated_at: Time.zone.now)
 
-User.create!(name:  "Jeff",
-             email: "jeff@gmail.com",
+User.create!(name:  "Ben",
+             email: "ben@gmail.com",
              password:              "basketball",
              password_confirmation: "basketball",
              admin: true,
